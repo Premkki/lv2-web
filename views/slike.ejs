@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerija videoigara</title>
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Galerija videoigara</h1>
+    <p>Stilizirana galerija slika povezanih s temom videoigara.</p>
+  </header>
+
+  <nav class="dropdown-nav" aria-label="Glavna navigacija">
+    <div class="menu-wrapper">
+      <div class="menu-button">Izbornik</div>
+      <ul class="menu-list">
+        <li><a href="/">Početna</a></li>
+        <li><a href="/grafikon.html">Grafikon</a></li>
+        <li><a href="/slike">Galerija</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Galerija gaming slika</h2>
+      <p>
+        U nastavku se nalazi galerija slika povezanih s temom videoigara.
+      </p>
+
+      <section class="gallery" aria-label="Galerija slika">
+        <% images.forEach(image => { %>
+          <figure>
+            <a href="#<%= image.id %>">
+              <img src="<%= image.url %>" alt="<%= image.title %>">
+            </a>
+            <figcaption><%= image.title %></figcaption>
+          </figure>
+        <% }) %>
+      </section>
+
+      <% images.forEach(image => { %>
+        <div class="lightbox" id="<%= image.id %>">
+          <a href="/slike" class="lightbox-overlay" aria-label="Zatvori prikaz">
+            <img src="<%= image.url %>" alt="<%= image.title %>">
+          </a>
+        </div>
+      <% }) %>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Svijet videoigara</p>
+  </footer>
+
+</body>
+</html>
