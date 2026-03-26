@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Meta description: opisuje sadržaj stranice i koristi se za SEO (tražilice poput Google-a) -->
+    <!-- Meta viewport: omogućuje pravilan prikaz i responzivnost stranice na mobilnim uređajima -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Web stranica o videoigrama s tabličnim prikazom podataka i dodatnim informacijama."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Svijet videoigara</title>
+  </head>
+  <body>
+    <header>
+      <h1>Svijet videoigara</h1>
+      <p>Pregled zanimljivih informacija o popularnim videoigrama.</p>
+    </header>
+
+    <nav class="dropdown-nav" aria-label="Glavna navigacija">
+      <div class="menu-wrapper">
+        <span class="menu-button">Izbornik</span>
+        <ul class="menu-list">
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="grafikon.html">Grafikon</a></li>
+          <li><a href="slike.html">Galerija slika</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Kao primjer baze podataka može se koristiti Video Game Sales dataset s platforme Kaggle, koji sadrži informacije o videoigrama poput naziva, godine izlaska, žanra i platforme. -->
+    <!-- Primjer: https://www.kaggle.com/datasets/gregorut/videogamesales -->
+
+    <main>
+      <section>
+        <article>
+          <h2>O videoigrama</h2>
+          <p>
+            Videoigre su jedan od najpopularnijih oblika digitalne zabave.
+            Postoje različiti žanrovi poput akcijskih, avanturističkih,
+            sportskih i RPG igara.
+          </p>
+        </article>
+      </section>
+
+      <section class="content-layout">
+        <article>
+          <h2>Popularne igre</h2>
+          <p>
+            U nastavku je prikazana tablica s osnovnim podacima o odabranim
+            videoigrama, koji će kasnije poslužiti i za vizualizaciju podataka.
+          </p>
+          <!-- Tablica s osnovnim podacima o odabranim videoigrama -->
+          <h3>Tablica 1: Popis videoigara s osnovnim informacijama</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Naziv</th>
+                <th>Godina</th>
+                <th>Žanr</th>
+                <th>Platforma</th>
+                <th>Ocjena</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>The Witcher 3</td>
+                <td>2015</td>
+                <td>RPG</td>
+                <td>PC, PS, Xbox</td>
+                <td>9.8</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>GTA V</td>
+                <td>2013</td>
+                <td>Akcija</td>
+                <td>PC, PS, Xbox</td>
+                <td>9.7</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Minecraft</td>
+                <td>2011</td>
+                <td>Sandbox</td>
+                <td>PC, Mobile, Console</td>
+                <td>9.5</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Elden Ring</td>
+                <td>2022</td>
+                <td>RPG</td>
+                <td>PC, PS, Xbox</td>
+                <td>9.6</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Fortnite</td>
+                <td>2017</td>
+                <td>Battle Royale</td>
+                <td>PC, PS, Xbox, Mobile</td>
+                <td>8.9</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Cyberpunk 2077</td>
+                <td>2020</td>
+                <td>RPG</td>
+                <td>PC, PS, Xbox</td>
+                <td>8.5</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>FIFA 23</td>
+                <td>2022</td>
+                <td>Sport</td>
+                <td>PC, PS, Xbox</td>
+                <td>8.2</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Call of Duty: Warzone</td>
+                <td>2020</td>
+                <td>Shooter</td>
+                <td>PC, PS, Xbox</td>
+                <td>8.7</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <aside>
+          <h3>Gaming fotografija</h3>
+          <p>
+            Slika prikazuje svijet videoigara i prilagođava se veličini ekrana.
+          </p>
+
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="slike/gaming-mobile.jpg"
+            />
+            <img
+              src="slike/gaming-desktop.jpg"
+              alt="Gaming setup s monitorom, tipkovnicom i kontrolerom povezan s temom videoigara"
+              aria-label="Fotografija gaming opreme povezana s temom videoigara"
+              class="responsive-game-image"
+            />
+          </picture>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Svijet videoigara</p>
+    </footer>
+  </body>
+</html>

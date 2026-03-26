@@ -1,0 +1,264 @@
+/* CSS varijable definirane u :root omogućuju lakšu promjenu boja, dimenzija i stilova kroz cijeli projekt. */
+:root {
+  /* Boje grafikona */
+  --color-rpg: #2c3e50;
+  --color-akcija: #1abc9c;
+  --color-sandbox: #3498db;
+  --color-battle: #9b59b6;
+  --color-sport: #f39c12;
+  --color-shooter: #e74c3c;
+
+  /* Dimenzije */
+  --chart-size: 320px;
+  --hole-size: 140px;
+
+  /* Opći stil */
+  --main-font: Arial, sans-serif;
+  --main-bg: #ffffff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-nav {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.menu-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-button {
+  display: inline-block;
+  background-color: #2c3e50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: #1abc9c;
+  transform: scale(1.05);
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: none;
+  overflow: hidden;
+}
+
+.menu-list li a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #2c3e50;
+  transition:
+    background-color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.menu-list li a:hover {
+  background-color: #d6eaf8;
+  padding-left: 22px;
+}
+
+.menu-wrapper:hover .menu-list {
+  display: block;
+}
+
+.chart-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.donut-chart {
+  width: var(--chart-size);
+  height: var(--chart-size);
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--color-rpg) 0% 37.5%,
+    var(--color-akcija) 37.5% 50%,
+    var(--color-sandbox) 50% 62.5%,
+    var(--color-battle) 62.5% 75%,
+    var(--color-sport) 75% 87.5%,
+    var(--color-shooter) 87.5% 100%
+  );
+  position: relative;
+  box-shadow: var(--shadow);
+  animation: growChart 1s ease-out;
+}
+
+.donut-chart::after {
+  content: "";
+  width: var(--hole-size);
+  height: var(--hole-size);
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chart-legend ul {
+  list-style: none;
+  padding: 0;
+}
+
+.chart-legend li {
+  margin-bottom: 12px;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.rpg {
+  background-color: var(--color-rpg);
+}
+
+.akcija {
+  background-color: var(--color-akcija);
+}
+
+.sandbox {
+  background-color: var(--color-sandbox);
+}
+
+.battle {
+  background-color: var(--color-battle);
+}
+
+.sport {
+  background-color: var(--color-sport);
+}
+
+.shooter {
+  background-color: var(--color-shooter);
+}
+
+/* Histogram grafikon - prikazuje se na manjim ekranima */
+.bar-chart {
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.bar {
+  display: block;
+  width: 40px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  transform-origin: bottom;
+  animation: growBar 1s ease-out;
+}
+
+.bar:hover {
+  transform: scale(1.1);
+}
+
+/*Na manjim ekranima prikazuj histogram umjesto donut grafikona */
+@media (max-width: 768px) {
+  .chart-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bar-chart {
+    display: flex;
+  }
+
+  .donut-chart {
+    display: none;
+  }
+}
+
+@keyframes growChart {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes growBar {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--main-bg);
+  margin: 20px;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+}
+
+header p {
+  margin: 0;
+}
+
+main {
+  margin-top: 20px;
+}
+
+h2,
+h3 {
+  color: #2c3e50;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  text-align: center;
+}
+

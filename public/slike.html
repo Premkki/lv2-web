@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Meta viewport: omogućuje pravilan prikaz stranice na mobilnim uređajima -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta description: opisuje sadržaj stranice i koristi se za SEO -->
+    <meta
+      name="description"
+      content="Galerija stiliziranih slika povezanih s temom videoigara."
+    />
+    <link rel="stylesheet" href="style_slike.css" />
+    <title>Galerija slika</title>
+  </head>
+  <body>
+    <header>
+      <h1>Galerija videoigara</h1>
+      <p>Stilizirana galerija slika povezanih s temom videoigara.</p>
+    </header>
+
+    <nav class="dropdown-nav" aria-label="Glavna navigacija">
+      <div class="menu-wrapper">
+        <span class="menu-button">Izbornik</span>
+        <ul class="menu-list">
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="grafikon.html">Grafikon</a></li>
+          <li><a href="slike.html">Galerija slika</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Galerija slika s lazy-loading atributom -->
+      <section class="gallery-section">
+        <h2>Galerija gaming slika</h2>
+        <p>
+          U nastavku se nalazi galerija slika povezanih s temom videoigara.
+          Slike koriste lazy-loading radi bržeg učitavanja stranice.
+        </p>
+
+        <div class="gallery">
+          <a href="#img1">
+            <img
+              src="slike/slika1.jpg"
+              alt="Gaming setup s RGB rasvjetom"
+              loading="lazy"
+            />
+          </a>
+
+          <a href="#img2">
+            <img
+              src="slike/slika2.jpg"
+              alt="Kontroler za videoigre na stolu"
+              loading="lazy"
+            />
+          </a>
+
+          <a href="#img3">
+            <img
+              src="slike/slika3.jpg"
+              alt="Tipkovnica i miš za gaming"
+              loading="lazy"
+            />
+          </a>
+
+          <a href="#img4">
+            <img
+              src="slike/slika4.jpg"
+              alt="Monitor s prikazom videoigre"
+              loading="lazy"
+            />
+          </a>
+
+          <a href="#img5">
+            <img
+              src="slike/slika5.jpg"
+              alt="Gaming soba s više monitora"
+              loading="lazy"
+            />
+          </a>
+
+          <a href="#img6">
+            <img
+              src="slike/slika6.jpg"
+              alt="Igraća konzola i kontroleri"
+              loading="lazy"
+            />
+          </a>
+        </div>
+        <!-- Lightbox prikaz velike slike bez korištenja JavaScripta -->
+        <div id="img1" class="lightbox">
+          <a href="#" class="close">Close</a>
+          <img src="slike/slika1.jpg" alt="Gaming setup s RGB rasvjetom" />
+        </div>
+
+        <div id="img2" class="lightbox">
+          <a href="#" class="close">Close</a>
+          <img src="slike/slika2.jpg" alt="Kontroler za videoigre na stolu" />
+        </div>
+
+        <div id="img3" class="lightbox">
+          <a href="#" class="close">Close</a>
+          <img src="slike/slika3.jpg" alt="Tipkovnica i miš za gaming" />
+        </div>
+
+        <div id="img4" class="lightbox">
+          <a href="#" class="close">Close</a>
+          <img src="slike/slika4.jpg" alt="Monitor s prikazom videoigre" />
+        </div>
+
+        <div id="img5" class="lightbox">
+          <a href="#" class="close">Close</a>
+          <img src="slike/slika5.jpg" alt="Gaming soba s više monitora" />
+        </div>
+
+        <div id="img6" class="lightbox">
+          <a href="#" class="close">Close</a>
+          <img src="slike/slika6.jpg" alt="Igraća konzola i kontroleri" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Svijet videoigara</p>
+    </footer>
+  </body>
+</html>

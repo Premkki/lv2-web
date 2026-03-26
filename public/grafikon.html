@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Meta viewport: omogućuje pravilan prikaz i responzivnost stranice na mobilnim uređajima -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vizualizacija podataka o videoigrama pomoću CSS-only donut grafikona."
+    />
+    <link rel="stylesheet" href="grafikon.css" />
+    <title>Grafikon videoigara</title>
+  </head>
+  <body>
+    <header>
+      <h1>Grafikon videoigara</h1>
+      <p>
+        Vizualizacija žanrova odabranih videoigara pomoću CSS-only donut
+        grafikona.
+      </p>
+    </header>
+
+    <nav class="dropdown-nav" aria-label="Glavna navigacija">
+      <div class="menu-wrapper">
+        <span class="menu-button">Izbornik</span>
+        <ul class="menu-list">
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="grafikon.html">Grafikon</a></li>
+          <li><a href="slike.html">Galerija slika</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="chart-section">
+        <article>
+          <h2>Donut grafikon prema žanrovima</h2>
+          <p>
+            Grafikon je izrađen na temelju podataka iz tablice na početnoj
+            stranici i prikazuje zastupljenost pojedinih žanrova videoigara.
+          </p>
+
+          <div class="donut-chart"></div>
+          <!-- Histogram grafikon (prikazuje se na manjim ekranima) -->
+          <div class="bar-chart">
+            <div class="bar rpg" style="height: 120px"></div>
+            <div class="bar akcija" style="height: 80px"></div>
+            <div class="bar sandbox" style="height: 60px"></div>
+            <div class="bar battle" style="height: 70px"></div>
+            <div class="bar sport" style="height: 50px"></div>
+            <div class="bar shooter" style="height: 40px"></div>
+          </div>
+        </article>
+
+        <aside class="chart-legend">
+          <h3>Legenda</h3>
+          <ul>
+            <li><span class="legend-color rpg"></span> RPG - 3 igre</li>
+            <li><span class="legend-color akcija"></span> Akcija - 1 igra</li>
+            <li><span class="legend-color sandbox"></span> Sandbox - 1 igra</li>
+            <li>
+              <span class="legend-color battle"></span> Battle Royale - 1 igra
+            </li>
+            <li><span class="legend-color sport"></span> Sport - 1 igra</li>
+            <li><span class="legend-color shooter"></span> Shooter - 1 igra</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Svijet videoigara</p>
+    </footer>
+  </body>
+</html>
