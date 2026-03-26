@@ -1,4 +1,4 @@
 # LV2 - Node.js projekt
 
 ## Railway deploy link:
-https://tvoj-link.up.railway.app
+lv2-web-production.up.railway.app
