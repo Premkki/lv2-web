@@ -44,6 +44,7 @@
 
       <% images.forEach(image => { %>
         <div class="lightbox" id="<%= image.id %>">
+          <a href="#" class="close">Close</a>
           <a href="/slike" class="lightbox-overlay" aria-label="Zatvori prikaz">
             <img src="<%= image.url %>" alt="<%= image.title %>">
           </a>
